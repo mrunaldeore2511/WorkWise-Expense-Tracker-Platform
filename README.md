@@ -1,45 +1,42 @@
 # WorkWise
 
-## Project Description
+## 📋 Project Description
 
-WorkWise is a full-stack expense management and productivity platform designed to help users track expenses, gain insights, and manage financial data efficiently. The application provides a clean dashboard, expense categorization, and visual analytics using charts.
-
-It follows a modern **client–server architecture** with secure authentication, public and protected routing, and includes an integrated **Gemini-powered chatbot** to assist users with navigation, feature understanding, and overall usage support.
+WorkWise is a full-stack expense management and productivity platform designed to help users track expenses, gain insights, and manage financial data efficiently. The application provides a clean dashboard, expense categorization, and visual analytics using charts. It follows a modern **client–server architecture** with secure authentication, public and protected routing, and includes an integrated **Gemini-powered chatbot** to assist users with navigation, feature understanding, and overall usage support.
 
 ---
 
-## Table of Contents
+## 📑 Table of Contents
 
-- Features
-- Tech Stack
-- Project Structure
-- Screenshots
-- Installation & Setup
-- Running the Project
-- How to Use the Application
-- Routing Strategy
-- Future Improvements
-
----
-
-## Features
-
-- User authentication (Signup / Login)
-- Protected expense hub for authenticated users
-- Add, view, and manage expenses
-- Expense insights with bar and pie charts
-- Monthly and daily category-based analysis
-- User-specific workflows (Student, Freelancer, Traveller)
-- Integrated Gemini chatbot for in-app assistance
-- Clean UI with reusable components
-- Secure API with token-based authentication
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Screenshots](#screenshots)
+- [Installation & Setup](#installation--setup)
+- [Running the Project](#running-the-project)
+- [How to Use the Application](#how-to-use-the-application)
+- [Routing Strategy](#routing-strategy)
+- [Future Improvements](#future-improvements)
 
 ---
 
-## Tech Stack
+## ✨ Features
+
+- ✅ User authentication (Signup / Login)
+- ✅ Protected expense hub for authenticated users
+- ✅ Add, view, and manage expenses
+- ✅ Expense insights with bar and pie charts
+- ✅ Monthly and daily category-based analysis
+- ✅ User-specific workflows (Student, Freelancer, Traveller)
+- ✅ Integrated Gemini chatbot for in-app assistance
+- ✅ Clean UI with reusable components
+- ✅ Secure API with token-based authentication
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
-
 - React
 - React Router
 - Chart.js
@@ -47,7 +44,6 @@ It follows a modern **client–server architecture** with secure authentication,
 - Axios
 
 ### Backend
-
 - Node.js
 - Express.js
 - MongoDB
@@ -55,160 +51,224 @@ It follows a modern **client–server architecture** with secure authentication,
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
+```
 workwise/
 │
 ├── client/
-│ └── workwise/
-│ ├── src/
-| | ├── assests/
-│ │ ├── pages/
-│ │ ├── context/
-│ │ ├── routes/
-│ │ ├── api/
-│ │ └── App.jsx
-│ └── package.json
+│   └── workwise/
+│       ├── src/
+│       │   ├── assets/
+│       │   ├── pages/
+│       │   ├── context/
+│       │   ├── routes/
+│       │   ├── api/
+│       │   ├── screenshots/
+│       │   └── App.jsx
+│       └── package.json
 │
 ├── server/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ ├── middleware/
-│ ├── config/
-│ └── server.js
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── config/
+│   ├── .env.example
+│   └── index.js
+│
+└── README.md
+```
 
 ---
 
-## Screenshots
-
-Below are some screenshots showcasing the WorkWise user interface and core features.
+## 📸 Screenshots
 
 ### Landing Page
+![Home Page](client/workwise/screenshots/home1.jpeg)
+![Home Page 2](client/workwise/screenshots/home2.jpeg)
+![Home Page 3](client/workwise/screenshots/home3.jpeg)
 
-![Home Page](../client.workwise/screenshots/home1.jpeg)
-(screenshots/home2.jpeg)
-(screenshots/home3.jpeg)
+### Authentication
 
-### Signup Page
+#### Signup Page
+![Signup Page](client/workwise/screenshots/signup.jpeg)
 
-![Signup Page](screenshots/signup.jpeg)
+#### Login Page
+![Login Page](client/workwise/screenshots/login.jpeg)
 
-### Login Page
+#### Expense Hub
+![Expense Hub](client/workwise/screenshots/expense-hub.jpeg)
 
-![Login Page](screenshots/login.jpeg)
+#### Chat Bot
+![Chatbot](client/workwise/screenshots/chatbot.jpeg)
 
-### Expense Hub
+### Student Workflow
 
-![Expense Hub](screenshots/expense hub.jpeg)
+#### Add Expense
+![Add Expense - Student](client/workwise/screenshots/student-add-expense.jpeg)
 
-### Add Expense (Student)
+#### Expense Insights
+![Expense Insight - Student 1](client/workwise/screenshots/student-expense-insight1.jpeg)
+![Expense Insight - Student 2](client/workwise/screenshots/student-expense-insight2.jpeg)
+![Expense Insight - Student 3](client/workwise/screenshots/student-expense-insight3.jpeg)
 
-![Add Expense](screenshots/student-add-expense.jpeg)
-![Expense-Insight](screenshots/student-expense-insight1.jpeg)
-(screenshots/student-expense-insight2.jpeg)
-(screenshots/student-expense-insight3.jpeg)
+### Freelancer Workflow
 
-### Add Expense (Freelancer)
+#### Add Expense
+![Add Expense - Freelancer](client/workwise/screenshots/freelancer-add-expense.jpeg)
 
-![Add Expense](screenshots/freelancer-add-expense.jpeg)
-![Expense-Insight](screenshots/freelancer-expense-insight1.jpeg)
-(screenshots/freelancer-expense-insight2.jpeg)
-(screenshots/freelancer-expense-insight3.jpeg)
+#### Expense Insights
+![Expense Insight - Freelancer 1](client/workwise/screenshots/freelancer-expense-insight1.jpeg)
+![Expense Insight - Freelancer 2](client/workwise/screenshots/freelancer-expense-insight2.jpeg)
+![Expense Insight - Freelancer 3](client/workwise/screenshots/freelancer-expense-insight3.jpeg)
 
-### Add Expense (Traveller)
+### Traveller Workflow
 
-![Add Expense](screenshots/traveller-add-expense.jpeg)
-![Expense-Insight](screenshots/traveller-expense-insight1.jpeg)
-(screenshots/traveller-expense-insight2.jpeg)
-(screenshots/traveller-expense-insight3.jpeg)
+#### Add Expense
+![Add Expense - Traveller](client/workwise/screenshots/traveller-add-expense.jpeg)
+
+#### Expense Insights
+![Expense Insight - Traveller 1](client/workwise/screenshots/traveller-expense-insight1.jpeg)
+![Expense Insight - Traveller 2](client/workwise/screenshots/traveller-expense-insight2.jpeg)
+![Expense Insight - Traveller 3](client/workwise/screenshots/traveller-expense-insight3.jpeg)
 
 ---
 
-## Installation & Setup
+## 🚀 Installation & Setup
 
 ### Prerequisites
 
-- Node.js installed
-- MongoDB installed or MongoDB Atlas account
-- Git
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [MongoDB](https://www.mongodb.com/) installed locally or a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account
+- [Git](https://git-scm.com/)
 
----
+### 1️⃣ Backend Setup
 
-## Running the Project
+Navigate to the `server` folder and install dependencies:
 
-### Backend Setup
-
+```bash
 cd server
 npm install
+```
 
-Create a `.env` file in the `server` folder:
+Create a `.env` file based on `.env.example`:
 
+```env
 PORT=4000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
-MAIL_HOST=
-MAIL_USER=
-MAIL_PORT=
-MAIL_PASSWORD=
+MAIL_HOST=your_mail_host
+MAIL_USER=your_mail_user
+MAIL_PORT=your_mail_port
+MAIL_PASSWORD=your_mail_password
+```
 
 Start the backend server:
 
-### Frontend Setup
+```bash
+npm run start
+# or
+node server.js
+```
 
+The backend will run on: **http://localhost:4000**
+
+### 2️⃣ Frontend Setup
+
+Navigate to the `client/workwise` folder and install dependencies:
+
+```bash
 cd client/workwise
 npm install
+```
+
+Start the frontend development server:
+
+```bash
 npm run dev
+```
 
-The application will run on:
-
-- Frontend: http://localhost:5173
-- Backend: http://localhost:4000
+The frontend will run on: **http://localhost:5173**
 
 ---
 
-## How to Use the Application
+## ▶️ Running the Project
 
-1. Open the application in your browser
-2. Signup using a new account or login with existing credentials
-3. After login, you will be redirected to the expense hub page
-4. Add new expenses using the Add Expense page
-5. Analyze expenses using charts and monthly filters
+Once both servers are running:
+
+- **Frontend**: http://localhost:5173
+- **Backend**: http://localhost:4000
+
+Open your browser and navigate to the frontend URL to start using WorkWise!
 
 ---
 
-## Routing Strategy
+## 📖 How to Use the Application
+
+1. **Open the application** in your browser at http://localhost:5173
+2. **Sign up** using a new account or **login** with existing credentials
+3. After login, you will be redirected to the **Expense Hub** page
+4. **Add new expenses** using the Add Expense page
+5. **Analyze expenses** using charts and monthly filters
+6. Use the **Gemini chatbot** for assistance with features and navigation
+
+---
+
+## 🗺️ Routing Strategy
 
 ### Public Routes
-
 - `/` – Landing page
 - `/login` – User login
 - `/signup` – User registration
 
 ### Protected Routes
+- `/expense-hub` – Expense analytics dashboard
+- `/add-expense` – Add new expense form
 
-- `/expense-hub` – Expense analytics
-- `/add-expense` – Add new expense
-
-Unauthorized users cannot access protected routes.
-
----
-
-## Future Improvements
-
-- Edit and delete expenses
-- Export expense reports
-- Dark mode
-- Role-based access control
+> **Note**: Unauthorized users cannot access protected routes and will be redirected to the login page.
 
 ---
 
-## Author
+## 🔮 Future Improvements
 
-Mrunal Deore
+- [ ] Edit and delete expenses functionality
+- [ ] Export expense reports (PDF/CSV)
+- [ ] Dark mode toggle
+- [ ] Role-based access control (Admin, User)
+- [ ] Mobile responsive optimization
+- [ ] Budget limit alerts and notifications
+- [ ] Multi-currency support
+- [ ] Recurring expense tracking
 
 ---
 
-## License
+## 👨‍💻 Author
+
+**Mrunal Deore**
+
+---
+
+## 📄 License
 
 This project is for educational and personal use.
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
+
+---
+
+## 📧 Support
+
+If you have any questions or need help with setup, please open an issue in the repository.
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by Mrunal Deore</p>
+  <p>⭐ Star this repo if you found it helpful!</p>
+</div>
