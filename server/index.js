@@ -41,7 +41,11 @@ app.listen(PORT, () => {
     console.log(`Server is running at port ${PORT}`)
 })
 
+
 app.use(cors({
-    origin : process.env.FRONTEND_URL,
-    creadentials : true
-}))
+  origin: [
+    process.env.FRONTEND_URL,
+    'https://work-wise-expense-tracker-platform-99opb2cke.vercel.app'
+  ],
+  credentials: true
+}));
