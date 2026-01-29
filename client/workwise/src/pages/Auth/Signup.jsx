@@ -1,4 +1,3 @@
-import LoginImage from "../../assets/loginImg.jpg"
 import { AiFillEye } from "react-icons/ai";
 import React, { useState } from "react";
 import { signup } from "../../api/auth";
