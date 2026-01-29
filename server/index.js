@@ -1,27 +1,44 @@
 const express  = require("express");
 const app = express();
-const bodyParser = require("body-parser");
 require("dotenv").config();
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
+const database = require("./config/database");
+
+// Routes
 const userRoutes = require("./routes/User");
 const studentRoutes = require("./routes/Student");
 const freelancerRoutes = require("./routes/Freelancer");
 const travellerRoutes = require("./routes/Traveller");
 const chatbotRoutes = require("./routes/Chatbot");
 
+// Allowed origins (local + deployed)
+const allowedOrigins = process.env.FRONTEND_URLS.split(",");
 
-const database = require("./config/database");
-const cookieParser = require("cookie-parser");
-const cors = require("cors");
+// CORS middleware (must come before routes)
+app.use(cors({
+    origin: function(origin, callback){
+        if(!origin) return callback(null, true); // allow requests with no origin
+        if(allowedOrigins.indexOf(origin) === -1){
+            const msg = "The CORS policy for this site does not allow access from the specified Origin.";
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    },
+    credentials: true
+}));
 
-const PORT = process.env.PORT || 4000;
-
+// Built-in middlewares
 app.use(express.json());
-app.use(cookieParser());
-app.use(cors({origin: process.env.FRONTEND_URL, credentials: true}));
-database.connect();
 app.use(bodyParser.json());
+app.use(cookieParser());
 
+// Connect DB
+database.connect();
+
+// Routes
 app.use("/api/user", userRoutes);
 app.use("/api/student", studentRoutes);
 app.use("/api/freelancer", freelancerRoutes);
@@ -29,23 +46,16 @@ app.use("/api/traveller", travellerRoutes);
 app.use("/api/test", require("./routes/test"));
 app.use("/api", chatbotRoutes);
 
+// Root endpoint
 app.get("/", (req,res) => {
     return res.json({
         success: true,
         message: "WorkWise server is up and running"
     })
-})
+});
 
-
+// Start server
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
     console.log(`Server is running at port ${PORT}`)
-})
-
-
-app.use(cors({
-  origin: [
-    'http://localhost:5173', // dev,
-    'https://work-wise-expense-tracker-platform-99opb2cke.vercel.app'
-  ],
-  credentials: true
-}));
+});
