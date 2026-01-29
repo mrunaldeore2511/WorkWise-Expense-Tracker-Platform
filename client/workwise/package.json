@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "react-scripts start",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -20,6 +21,7 @@
     "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.12.0",
+    "react-scripts": "^5.0.1",
     "react-super-responsive-table": "^6.0.2",
     "tailwindcss": "^4.1.18",
     "zustand": "^5.0.10"

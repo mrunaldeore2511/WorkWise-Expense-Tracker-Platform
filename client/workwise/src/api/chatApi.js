@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const sendChatMessage = async (question) => {
   const res = await axios.post(
-    "http://localhost:4000/api/chat",
+    "https://workwise-expense-tracker-platform-1.onrender.com/chat",
     { question },
     { withCredentials: true }
   );
