@@ -1,5 +1,4 @@
 import React from 'react'
-import LoginImage from "../../assets/loginImg.jpg"
 import { login } from "../../api/auth";
 import toast from "react-hot-toast";
 import { useState } from 'react';
