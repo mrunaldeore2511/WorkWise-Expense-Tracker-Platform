@@ -44,7 +44,7 @@ app.listen(PORT, () => {
 
 app.use(cors({
   origin: [
-    process.env.FRONTEND_URL,
+    'http://localhost:5173', // dev,
     'https://work-wise-expense-tracker-platform-99opb2cke.vercel.app'
   ],
   credentials: true
