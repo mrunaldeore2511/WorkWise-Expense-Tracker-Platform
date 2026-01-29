@@ -86,7 +86,7 @@ Below are some screenshots showcasing the WorkWise user interface and core featu
 
 ### Landing Page
 
-![Home Page](screenshots/home1.jpeg)
+![Home Page](../client.workwise/screenshots/home1.jpeg)
 (screenshots/home2.jpeg)
 (screenshots/home3.jpeg)
 
