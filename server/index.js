@@ -14,16 +14,14 @@ const freelancerRoutes = require("./routes/Freelancer");
 const travellerRoutes = require("./routes/Traveller");
 const chatbotRoutes = require("./routes/Chatbot");
 
-// Allowed origins (local + deployed)
 const allowedOrigins = process.env.FRONTEND_URLS.split(",");
 
-// CORS middleware (must come before routes)
 app.use(cors({
-    origin: function(origin, callback){
-        if(!origin) return callback(null, true); // allow requests with no origin
-        if(allowedOrigins.indexOf(origin) === -1){
-            const msg = "The CORS policy for this site does not allow access from the specified Origin.";
-            return callback(new Error(msg), false);
+    origin: function(origin, callback) {
+        // allow requests with no origin (e.g., curl, Postman)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            return callback(new Error("CORS not allowed"), false);
         }
         return callback(null, true);
     },
